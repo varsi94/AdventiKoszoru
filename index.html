@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Aventi koszorú</title>
+</head>
+
+<body style="padding: 0px; margin: 0px;">
+	<div id="app" style="height: 100vh"></div>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/react/17.0.1/umd/react.production.min.js"
+		integrity="sha512-YMtLFKDKe5a4zi7rJ0y4wdGErKZe3tx7L+AXDTxjNDzkv7jsaNhvumeU1xQvw6UqVwBVmYlO9NhsSuSVPUN/xQ=="
+		crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/17.0.1/umd/react-dom.production.min.js"
+		integrity="sha512-vN6rbu+vWW4Ck3s6RbLZs+0gRl5PWOZRUqap38gZtsheSqA2zDeI3PCshuxfYx7ytkoFMrmd0gA2sZZeP1RZYQ=="
+		crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"
+		integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ=="
+		crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js"
+		integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg=="
+		crossorigin="anonymous"></script>
+	<script type="text/javascript" src="js/bundle.js"> </script>
+	<script type="text/javascript">
+		define("moment", ["exports"], (exports) => {
+			exports.__esModule = true;
+			exports.default = window.moment;
+		});
+
+		define("react", ["exports"], (exports) =>{
+			exports.__esModule = true;
+			exports.default = window.React;
+		});
+
+		define("react-dom", ["exports"], (exports) =>{
+			exports.__esModule = true;
+			exports.default = window.ReactDOM;
+		});
+
+		requirejs(["index"], (index) => {
+			index.app.start();
+		});
+	</script>
+</body>
+
+</html>

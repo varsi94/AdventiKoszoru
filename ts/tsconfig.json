@@ -1,0 +1,23 @@
+{
+	"compileOnSave": true,
+	"compilerOptions": {
+		"outFile": "../js/bundle.js",
+		"target": "ES5",
+		"module": "amd",
+		"strict": true,
+		"esModuleInterop": true,
+		"skipLibCheck": true,
+		"forceConsistentCasingInFileNames": true,
+		"moduleResolution": "node",
+		"typeRoots": ["../vendor/"],
+		"noEmitOnError": true,
+		"baseUrl": "./",
+		"jsx": "react",
+		"paths": {
+			"moment": ["../vendor/moment.d.ts"],
+			"react-dom": ["../vendor/reactdom.d.ts"],
+			"react": ["../vendor/react.d.ts"]
+		}
+	},
+	"files": ["index.tsx"]
+}
